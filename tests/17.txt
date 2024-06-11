@@ -1,0 +1,12 @@
+#Ragados targy felvetele sikertelenul.
+
+#Szobák létrehozása
+create room K1 2
+create item holy_beer K1 true true
+
+#Hallgato, oktato letrehozasa
+create student st1 K1 dummy
+
+ct_pickup st1 0
+
+print_all

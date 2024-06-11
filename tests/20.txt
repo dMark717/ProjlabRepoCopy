@@ -1,0 +1,18 @@
+#Takaritono kitessekeli a bent levoket.
+
+#Szobák létrehozása
+create room K1 2
+create room K2 2
+
+#Ajto létrehozása
+connect K1 K2 d1 true
+connect K2 K1 d2 true
+
+#Takarito, hallgato letrehozasa
+create cleaner cle K1 dummy
+create student st1 K2 dummy
+
+#Takaritono kitakaritja K2-t
+ct_move cle 0
+
+print_all

@@ -1,0 +1,16 @@
+#Takaritono kiszelloztet.
+
+#Szobák létrehozása
+create room K1 2
+create room K2 2 true
+
+#Ajto létrehozása
+connect K1 K2 d1 true
+
+#Takarito letrehozasa
+create cleaner cle K1 dummy
+
+#Takaritono kiszellozteti K2-t
+ct_move cle 0
+
+print_all

@@ -1,0 +1,28 @@
+#Szoba létrehozása
+create room K1 5
+
+#Tárgy létrehozása a szobába
+create item transistor K1
+
+#Hallgató létrehozása
+create student st1 K1 dummy
+
+#Még a szobában van a tárgy
+assert room K1 item_count 1
+
+#Felveszi a tárgyat
+ct_pickup st1 0
+
+#Már nincs a szobába a tárgy
+assert room K1 item_count 0
+
+#Kiválasztja a tárgyat
+ct_select st1 0
+
+#Eldobja a tárgyat
+ct_drop st1
+
+#Ismét a szobába van a tárgy
+assert room K1 item_count 1
+
+print_all

@@ -1,0 +1,17 @@
+#Oktato elveszi a hallgato lelket.
+
+#Szobák létrehozása
+create room K1 2
+create room K2 2
+
+#Ajto létrehozása
+connect K1 K2 d1 true
+
+#Hallgato, oktato letrehozasa
+create student st1 K1 dummy
+create teacher tc K2 dummy
+
+#Oktato belep a szobaba
+ct_move st1 0
+
+print_all

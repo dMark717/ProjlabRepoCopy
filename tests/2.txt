@@ -1,0 +1,29 @@
+#Targy felvetele sikertelenul.
+
+#Szobák létrehozása
+create room K1 5
+
+create item transistor K1
+create item transistor K1
+create item transistor K1
+create item transistor K1
+create item transistor K1
+create item holy_beer K1
+
+#Tenyleg 6 targy kerult a szobaba
+assert room K1 item_count 6
+
+
+#Hallgato letrehozasa, targy felvetele.
+create student st1 K1 dummy
+ct_pickup st1 0
+ct_pickup st1 0
+ct_pickup st1 0
+ct_pickup st1 0
+ct_pickup st1 0
+ct_pickup st1 0
+
+#Felvette a targyat, egy targy a szobaban maradt.
+assert room K1 item_count 1
+
+print_all

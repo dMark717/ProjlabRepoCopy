@@ -1,0 +1,28 @@
+#Szobák létrehozása
+create room K1 1
+create room K2 1 true
+
+#Tárgy létrehozása
+create item transistor K1
+
+#Szobák összekapcsolása
+connect K1 K2 true true
+
+#Hallgató létrehozása
+create student st1 K1 dummy
+
+#Tárgy felvétele
+ct_pickup st1 0
+
+assert person st1 item_count 1
+
+#Hallgató átlép a mérgező szobába
+ct_move st1 0
+
+#Nem működik
+
+assert person st1 item_count 0
+
+print_all
+
+

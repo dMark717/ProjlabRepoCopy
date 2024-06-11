@@ -1,0 +1,19 @@
+#Szoba létrehozása
+create room K1 5 true
+
+print_all
+
+#Tárgy létrehozása
+create item air_freshener K1
+
+#Hallgató létrehozása
+create student st1 K1 dummy
+
+#Tűrgy felvétele
+ct_pickup st1 0
+
+#Tárgy használata
+ct_select st1 0
+ct_use st1
+
+print_all

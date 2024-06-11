@@ -1,0 +1,18 @@
+#Szobák létrehozása
+create room K1 1
+create room K2 1
+
+#Szobák összekapcsolása
+connect K1 K2 true true
+
+#Hallgatók létrehozása
+create student st1 K1 dummy
+create student st2 K2 dummy
+
+#Hallgató átléptetése
+ct_move st1 0
+
+assert room K2 person_count 1
+assert room K1 person_count 1
+
+print_all

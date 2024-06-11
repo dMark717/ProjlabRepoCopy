@@ -1,0 +1,36 @@
+#Ez egy komment.
+
+#Szobák létrehozása
+create room K1 3
+create room K2 4
+create room K3 2
+create room K4 5
+create room K5 2
+
+create item ffp2 K2
+create item ffp2 K3
+create item holy_beer K3
+assert room K2 item_count 1
+
+#Ajtók kreálása
+connect K1 K2 d1 true
+connect K1 K4 d2 true
+connect K2 K3 d3 true
+connect K2 K4 d4 true
+connect K3 K2 d5 true
+connect K4 K5 d6 true
+connect K5 K1 d7 false
+
+#Tanár létrehozása, majd mozgatása.
+create teacher GAJDOS K1 dummy
+ct_move GAJDOS 0
+
+#Majd a végén megvizsgáljuk, hogy odébbment-e.
+assert room K2 person_count 1
+
+#Ezután felvesz egy tárgyat
+ct_pickup GAJDOS 0
+
+assert room K2 item_count 0
+
+print_all

@@ -1,0 +1,33 @@
+#Szobák létrehozása
+create room K1 2
+create room K2 2 true
+
+#Szobák összekapcsolása
+connect K1 K2 door1
+
+#Hallgató létrehozása
+create student st1 K1 dummy
+
+#Tárgy létrehozása
+create item ffp2 K1
+
+#Tárgy felvétele
+ct_pickup st1 0
+
+assert person st1 mask_on false
+
+#Maszk felvétele
+ct_select st1 0
+ct_use st1
+
+assert person st1 mask_on true
+
+#Átlépés a másik szobába
+ct_move st1 0
+
+assert person st1 is_stunned false
+
+#Ugrás 5 időszeletet
+skip 5
+
+print_all

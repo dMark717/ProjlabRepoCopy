@@ -1,0 +1,19 @@
+#Targy felvetele sikeresen.
+
+#Szobák létrehozása
+create room K1 5
+
+create item holy_beer K1
+
+#Tenyleg egy targy kerult a szobaba
+assert room K1 item_count 1
+
+
+#Hallgato letrehozasa, targy felvetele.
+create student st1 K1 dummy
+ct_pickup st1 0
+
+#Felvette a targyat.
+assert room K1 item_count 0
+
+print_all

@@ -1,0 +1,11 @@
+#Szobak osszeolvadasa.
+
+#Szobák létrehozása
+create room K1 2
+create room K2 2
+
+merge K1 K2
+
+print_all
+
+#SOK SOK BAJ

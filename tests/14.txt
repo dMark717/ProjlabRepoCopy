@@ -1,0 +1,10 @@
+#Szobak osztodasa.
+
+#Szobák létrehozása
+create room K1 2
+
+split K1
+
+print_all
+
+#NEM JELENT MEG UJ SZOBA

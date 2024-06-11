@@ -1,0 +1,21 @@
+#Szoba létrehozása
+create room K1 5
+
+#Tárgyak létrehozása
+create item transistor K1
+create item transistor K1
+
+#Hallgató létrehozása
+create student st1 K1 dummy
+
+#Tárgyak felvétele
+ct_pickup st1 0
+ct_pickup st1 0
+
+#Tranzisztorok összekapcsolása
+ct_connect_trans st1 0 1
+
+#Tranzisztor lehelyezése
+ct_place st1 K1 0
+
+print_all
